@@ -5,7 +5,7 @@ part 'deal_model.g.dart';
 
 @JsonSerializable()
 class DealModel {
-  final List<DealModelData>? deal;
+  List<DealModelData> deal;
 
   DealModel({required this.deal});
 
@@ -19,15 +19,15 @@ class DealModel {
 @JsonSerializable()
 class DealModelData {
   final int id;
-  final String title;
-  final String text;
-  final List<dynamic> charts;
+  String title;
+  String text;
+  bool charts_is_done;
 
   DealModelData({
     required this.id, 
     required this.title, 
     required this.text, 
-    required this.charts, 
+    required this.charts_is_done, 
   });
 
 
@@ -42,12 +42,12 @@ class DealModelData {
 //     'id': 12,
 //     'title': 'sdtbertbe',
 //     'text': 'sldnfboiwentubeortbne',
-//     'charts': []
+//     'charts': true
 //   },
 //   {
 //     'id': 32,
 //     'title': '1jewtbioeoit',
 //     'text': 'ipetpib siptbiopstiobosiodfgio bsdio '
-//     'charts': []
+//     'charts': false
 //   }
 // ]

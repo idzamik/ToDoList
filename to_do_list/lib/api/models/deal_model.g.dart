@@ -21,7 +21,7 @@ DealModelData _$DealModelDataFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       text: json['text'] as String,
-      charts: json['charts'] as List<dynamic>,
+      charts_is_done: json['charts_is_done'] as bool,
     );
 
 Map<String, dynamic> _$DealModelDataToJson(DealModelData instance) =>
@@ -29,5 +29,5 @@ Map<String, dynamic> _$DealModelDataToJson(DealModelData instance) =>
       'id': instance.id,
       'title': instance.title,
       'text': instance.text,
-      'charts': instance.charts,
+      'charts_is_done': instance.charts_is_done,
     };
